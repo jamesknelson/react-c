@@ -1,7 +1,7 @@
 {
   "name": "react-c",
   "version": "0.2.0",
-  "description": "Provides structure to your component's CSS by helping you use semantic class names.",
+  "description": "Provides structure to your component's CSS by helping you write semantic class names.",
   "main": "lib/c.js",
   "scripts": {
     "compile": "babel --stage 0 -d lib/ src/",
