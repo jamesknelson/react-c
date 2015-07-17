@@ -206,6 +206,6 @@ Given most React components are very small and have limited scope, BEM is overki
 
 ## Related Projects
 
-**react-c** is part of [react-base](https://github.com/jamesknelson/react-base) - a collection of Higher-Order Components to *make your life easier*. was extracted from `numbat-ui`.
+**react-c** is part of [react-base](https://github.com/jamesknelson/react-base) - a collection of Higher-Order Components to *make your life easier*.
 
 **react-base** (and react-c) were extracted from [numbat-ui](https://github.com/jamesknelson/numbat-ui) - a collection of UI components for React based on Google's Material Design.
