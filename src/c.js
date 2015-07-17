@@ -9,7 +9,7 @@ export default function c(prefix) {
 
     const componentName = component.prototype.displayName || component.name
 
-    component.prototype.classes = function classes(classNames, ...overrideClassNames) {
+    component.prototype.cRoot = function cRoot(classNames, ...overrideClassNames) {
       return [
         `${prefix}-${componentName}`,
         this.c(classNames),
