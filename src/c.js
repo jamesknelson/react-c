@@ -2,12 +2,12 @@ import classNames from 'classnames'
 import invariant from 'invariant'
 
 
-export default function prefixedClasses(prefix) {
+export default function c(prefix) {
   return function decorator(component) {
-    invariant(!component.prototype.classes, "@prefixedClasses must be applied to a class with no `classes` property")
-    invariant(!component.prototype.c, "@prefixedClasses must be applied to a class with no `c` property")
+    invariant(!component.prototype.cRoot, "@c must be applied to a class with no `cRoot` property")
+    invariant(!component.prototype.c, "@c must be applied to a class with no `c` property")
 
-    const componentName = component.name
+    const componentName = component.prototype.displayName || component.name
 
     component.prototype.classes = function classes(classNames, ...overrideClassNames) {
       return [
