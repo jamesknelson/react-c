@@ -8,7 +8,7 @@ With react-c, writing clean CSS for React is *so simple* that you no longer have
 
 The best way to understand react-c is to see it in action, so let's have a look how it is used in a slightly simplified copy of [numbat-ui](https://github.com/jamesknelson/numbat-ui)'s Paper component:
 
-```
+```JavaScript
 import React from "react"
 import c from "react-c"
 
@@ -36,7 +36,7 @@ class Paper extends React.Component {
 
 Rendering a `Paper` component with the `rounded` property set to `true` will produce the following:
 
-```
+```html
 <div class="nui-Paper nui-Paper-rounded">
   <div class="nui-Paper-inner">
     ...
@@ -46,7 +46,7 @@ Rendering a `Paper` component with the `rounded` property set to `true` will pro
 
 This output in turn is styled using LESS or SCSS, using the `&-` selector to prevent Carpal Tunnel Syndrome:
 
-```
+```less
 .nui-Paper {
   //...
 
@@ -68,19 +68,19 @@ This output in turn is styled using LESS or SCSS, using the `&-` selector to pre
 
 ### 1. Install with NPM:
 
-```
+```JavaScript
 npm install react-c --save
 ```
 
 ### 2. Import the module:
 
-```
+```JavaScript
 import c from 'react-c' // ES6
 ```
 
 *or*
 
-```
+```JavaScript
 var c = require('react-c') // CommonJS
 ```
 
@@ -88,7 +88,7 @@ var c = require('react-c') // CommonJS
 
 You have two options to do this. If you're building modules by extending `React.Component`, I recommend using ES7 decorators:
 
-```
+```JavaScript
 @c("ns")
 class MyComponent extends React.Component {
   ...
@@ -97,7 +97,7 @@ class MyComponent extends React.Component {
 
 Otherwise, just pass your components to the `c(prefix)` manually:
 
-```
+```JavaScript
 var MyComponent = React.createClass({
   ...
 })
@@ -129,7 +129,7 @@ c("ns")(MyComponent)
 
     Example:
 
-    ```
+    ```less
     /* Good */
     .MyComponent {
       /* ... */
@@ -150,7 +150,7 @@ c("ns")(MyComponent)
 
     Example:
 
-    ```
+    ```less
     .MyComponent {
       /* good */
       &-inner &-input {
